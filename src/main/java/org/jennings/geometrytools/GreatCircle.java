@@ -855,8 +855,9 @@ public class GreatCircle {
         double latmax = 85;
         double latmin = -85;
 
-        double maxsize = 0.99;
-        double minsize = 0.2;
+        // In Kilometers
+        double maxsize = 30;  
+        double minsize = 20; 
 
         boolean esriGeom = true;
 
@@ -869,7 +870,7 @@ public class GreatCircle {
                 double rndlat = rnd.nextDouble() * (latmax - latmin) + latmin;
                 double rndsize = rnd.nextDouble() * (maxsize - minsize) + minsize;
 
-                JSONObject geom = gc.createCirle(rndlon, rndlat, rndsize, 20, true);
+                JSONObject geom = gc.createCirle(rndlon, rndlat, rndsize, 200, true);
 
                 JSONObject properties = new JSONObject();
 
