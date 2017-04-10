@@ -1,0 +1,8 @@
+Flight Simulator Event Server polls servers 
+- Web Server interface excepts calls for current position of a plane
+- Each Web Server would run simulations for several planes 
+- Planes would take off from an airport and travel to another airport
+- After a period of time on the ground the plane would continue
+- Return id, flight-id, position, speed, direction, and altitude 
+- Each server would run a unique set of "planes" 
+- The Event Server would poll the server(s) for each plane 
