@@ -825,17 +825,11 @@ public class GreatCircle {
 
     }
 
-    public String generateRandomWords(int numchars) {
-        Random random = new Random();
-        char[] word = new char[numchars];
-        for (int j = 0; j < word.length; j++) {
-            word[j] = (char) ('a' + random.nextInt(26));
-        }
-        return new String(word);
-    }
+
 
     public static void main(String[] args) {
         GreatCircle gc = new GreatCircle();
+        RandomData rd = new RandomData();
 //        gc.runSinglePointTest();
 //        gc.runRandomWorldTest();
 //        gc.runRandomTroubleSpotTest();
@@ -880,10 +874,10 @@ public class GreatCircle {
                 properties.put("longitude", rndlon);
                 properties.put("latitude", rndlat);
                 properties.put("size", rndsize);
-                properties.put("rndfield1", gc.generateRandomWords(8));
-                properties.put("rndfield2", gc.generateRandomWords(8));
-                properties.put("rndfield3", gc.generateRandomWords(8));
-                properties.put("rndfield4", gc.generateRandomWords(8));
+                properties.put("rndfield1", rd.generateRandomWords(8));
+                properties.put("rndfield2", rd.generateRandomWords(8));
+                properties.put("rndfield3", rd.generateRandomWords(8));
+                properties.put("rndfield4", rd.generateRandomWords(8));
 
                 JSONObject feature = new JSONObject();
                 feature.put("feature", properties);
@@ -934,10 +928,10 @@ public class GreatCircle {
                 properties.put("longitude", rndlon);
                 properties.put("latitude", rndlat);
                 properties.put("size", rndsize);
-                properties.put("rndfield1", gc.generateRandomWords(8));
-                properties.put("rndfield2", gc.generateRandomWords(8));
-                properties.put("rndfield3", gc.generateRandomWords(8));
-                properties.put("rndfield4", gc.generateRandomWords(8));
+                properties.put("rndfield1", rd.generateRandomWords(8));
+                properties.put("rndfield2", rd.generateRandomWords(8));
+                properties.put("rndfield3", rd.generateRandomWords(8));
+                properties.put("rndfield4", rd.generateRandomWords(8));
 
                 feature.put("properties", properties);
                 
